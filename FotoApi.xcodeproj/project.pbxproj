@@ -18,6 +18,7 @@
 		43BC569928448FF000A2DA8C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569828448FF000A2DA8C /* TableViewController.swift */; };
 		43BC569B2844905400A2DA8C /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569A2844905400A2DA8C /* DetailVC.swift */; };
 		43BC569D2844907800A2DA8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569C2844907800A2DA8C /* Constants.swift */; };
+		43BC569F2844B74600A2DA8C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569E2844B74600A2DA8C /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		43BC569828448FF000A2DA8C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		43BC569A2844905400A2DA8C /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		43BC569C2844907800A2DA8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43BC569E2844B74600A2DA8C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		D0F62CF80B9BCD9398397ED9 /* Pods_FotoApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotoApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C5C6A093EA45CF58E0E9C3 /* Pods-FotoApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotoApi.debug.xcconfig"; path = "Target Support Files/Pods-FotoApi/Pods-FotoApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				43BC569528448F3C00A2DA8C /* Models */,
 				43BC569028448E1100A2DA8C /* Views */,
 				43BC569228448EDD00A2DA8C /* Controllers */,
+				43BC56A02844B75300A2DA8C /* Manager */,
 				43BC569128448E5300A2DA8C /* Supporting Files */,
 			);
 			path = FotoApi;
@@ -116,6 +119,14 @@
 				43BC569628448F8800A2DA8C /* TaskList.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		43BC56A02844B75300A2DA8C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				43BC569E2844B74600A2DA8C /* DataProvider.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C37EEB742144BBD0ADF4F9F1 /* Frameworks */ = {
@@ -252,6 +263,7 @@
 			files = (
 				43BC569728448F8800A2DA8C /* TaskList.swift in Sources */,
 				43BA42FF2844895C007DC6F0 /* AppDelegate.swift in Sources */,
+				43BC569F2844B74600A2DA8C /* DataProvider.swift in Sources */,
 				43BC569428448F2E00A2DA8C /* CustomTableViewCell.swift in Sources */,
 				43BC569928448FF000A2DA8C /* TableViewController.swift in Sources */,
 				43BC569D2844907800A2DA8C /* Constants.swift in Sources */,

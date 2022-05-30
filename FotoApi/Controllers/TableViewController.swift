@@ -11,7 +11,7 @@ import RealmSwift
 class TableViewController: UITableViewController {
     
     let realm = try! Realm()
-    var realmArray: Results<TaskList>!
+    var realmArray: Results<TaskListNew>!
     
     @IBOutlet weak var textField: UITextField! {
         didSet {
@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
         
         tableView.backgroundColor = .systemGray5
         
-        realmArray = realm.objects(TaskList.self)
+        realmArray = realm.objects(TaskListNew.self)
         
     }
     
@@ -74,7 +74,7 @@ class TableViewController: UITableViewController {
                 
                 let spending = realmArray[indexPath.row]
                 detailVC.imageTitle = spending.nameTask
-                detailVC.imageSegue = spending.imageTask
+                detailVC.urlString = spending.urlTask
             }
         }
     }
@@ -134,12 +134,14 @@ class TableViewController: UITableViewController {
             let secret = randomPhoto["secret"] as! String;
             let server = randomPhoto["server"] as! String;
             
-            let pictureUrl = self.convert(farm: farm, server: server, id: id, secret: secret)
+            let urlString = "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_c.jpg"
+            
+            let pictureUrl = URL(string: urlString)
             
             URLSession.shared.dataTask(with: pictureUrl!, completionHandler: { (data, _, _) in
                 DispatchQueue.main.async { [self] in
                     
-                    let value = TaskList(value: [data!, text])
+                    let value = TaskListNew(value: [data!, text, urlString])
                     try! realm.write {
                         realm.add(value)
                     }
@@ -148,10 +150,6 @@ class TableViewController: UITableViewController {
                 self.showLoader(show: false)
             }).resume()
         }.resume()
-    }
-    
-    func convert(farm: Int, server: String, id:String, secret: String) -> URL? {
-        return URL(string:"https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_c.jpg")
     }
     
     func showError(text: String) {

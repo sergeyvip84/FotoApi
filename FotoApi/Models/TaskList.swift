@@ -6,9 +6,11 @@
 //
 
 import RealmSwift
+import Foundation
 
-class TaskList: Object {
+class TaskListNew: Object {
     @objc dynamic var imageTask = Data()
     @objc dynamic var nameTask = ""
+    @objc dynamic var urlTask = ""
 }
 
