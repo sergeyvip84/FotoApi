@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21A433012D91713A27F25B5B /* Pods_FotoApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F62CF80B9BCD9398397ED9 /* Pods_FotoApi.framework */; };
 		43BA42FF2844895C007DC6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA42FE2844895C007DC6F0 /* AppDelegate.swift */; };
 		43BA43012844895C007DC6F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA43002844895C007DC6F0 /* SceneDelegate.swift */; };
-		43BA43032844895C007DC6F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BA43022844895C007DC6F0 /* ViewController.swift */; };
 		43BA43062844895D007DC6F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BA43042844895D007DC6F0 /* Main.storyboard */; };
 		43BA43082844895F007DC6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43BA43072844895F007DC6F0 /* Assets.xcassets */; };
 		43BA430B2844895F007DC6F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BA43092844895F007DC6F0 /* LaunchScreen.storyboard */; };
+		43BC569428448F2E00A2DA8C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569328448F2E00A2DA8C /* CustomTableViewCell.swift */; };
+		43BC569728448F8800A2DA8C /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569628448F8800A2DA8C /* TaskList.swift */; };
+		43BC569928448FF000A2DA8C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569828448FF000A2DA8C /* TableViewController.swift */; };
+		43BC569B2844905400A2DA8C /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569A2844905400A2DA8C /* DetailVC.swift */; };
+		43BC569D2844907800A2DA8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC569C2844907800A2DA8C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11C1854661F43A19B1219BA5 /* Pods-FotoApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotoApi.release.xcconfig"; path = "Target Support Files/Pods-FotoApi/Pods-FotoApi.release.xcconfig"; sourceTree = "<group>"; };
 		43BA42FB2844895C007DC6F0 /* FotoApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FotoApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BA42FE2844895C007DC6F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43BA43002844895C007DC6F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43BA43022844895C007DC6F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43BA43052844895D007DC6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43BA43072844895F007DC6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43BA430A2844895F007DC6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43BA430C2844895F007DC6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43BC569328448F2E00A2DA8C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		43BC569628448F8800A2DA8C /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		43BC569828448FF000A2DA8C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		43BC569A2844905400A2DA8C /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		43BC569C2844907800A2DA8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D0F62CF80B9BCD9398397ED9 /* Pods_FotoApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotoApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C5C6A093EA45CF58E0E9C3 /* Pods-FotoApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotoApi.debug.xcconfig"; path = "Target Support Files/Pods-FotoApi/Pods-FotoApi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A433012D91713A27F25B5B /* Pods_FotoApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				43BA42FD2844895C007DC6F0 /* FotoApi */,
 				43BA42FC2844895C007DC6F0 /* Products */,
+				CF95444509C1C2735F6AEB22 /* Pods */,
+				C37EEB742144BBD0ADF4F9F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +71,68 @@
 		43BA42FD2844895C007DC6F0 /* FotoApi */ = {
 			isa = PBXGroup;
 			children = (
-				43BA42FE2844895C007DC6F0 /* AppDelegate.swift */,
-				43BA43002844895C007DC6F0 /* SceneDelegate.swift */,
-				43BA43022844895C007DC6F0 /* ViewController.swift */,
-				43BA43042844895D007DC6F0 /* Main.storyboard */,
-				43BA43072844895F007DC6F0 /* Assets.xcassets */,
-				43BA43092844895F007DC6F0 /* LaunchScreen.storyboard */,
-				43BA430C2844895F007DC6F0 /* Info.plist */,
+				43BC569528448F3C00A2DA8C /* Models */,
+				43BC569028448E1100A2DA8C /* Views */,
+				43BC569228448EDD00A2DA8C /* Controllers */,
+				43BC569128448E5300A2DA8C /* Supporting Files */,
 			);
 			path = FotoApi;
+			sourceTree = "<group>";
+		};
+		43BC569028448E1100A2DA8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43BA43042844895D007DC6F0 /* Main.storyboard */,
+				43BA43092844895F007DC6F0 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43BC569128448E5300A2DA8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43BC569C2844907800A2DA8C /* Constants.swift */,
+				43BA42FE2844895C007DC6F0 /* AppDelegate.swift */,
+				43BA43002844895C007DC6F0 /* SceneDelegate.swift */,
+				43BA43072844895F007DC6F0 /* Assets.xcassets */,
+				43BA430C2844895F007DC6F0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43BC569228448EDD00A2DA8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43BC569828448FF000A2DA8C /* TableViewController.swift */,
+				43BC569A2844905400A2DA8C /* DetailVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		43BC569528448F3C00A2DA8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43BC569328448F2E00A2DA8C /* CustomTableViewCell.swift */,
+				43BC569628448F8800A2DA8C /* TaskList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C37EEB742144BBD0ADF4F9F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0F62CF80B9BCD9398397ED9 /* Pods_FotoApi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF95444509C1C2735F6AEB22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1C5C6A093EA45CF58E0E9C3 /* Pods-FotoApi.debug.xcconfig */,
+				11C1854661F43A19B1219BA5 /* Pods-FotoApi.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43BA430F2844895F007DC6F0 /* Build configuration list for PBXNativeTarget "FotoApi" */;
 			buildPhases = (
+				D236E2964775DE72C93F304D /* [CP] Check Pods Manifest.lock */,
 				43BA42F72844895C007DC6F0 /* Sources */,
 				43BA42F82844895C007DC6F0 /* Frameworks */,
 				43BA42F92844895C007DC6F0 /* Resources */,
+				20407E2B535B59266F56B438 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +203,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20407E2B535B59266F56B438 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FotoApi/Pods-FotoApi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FotoApi/Pods-FotoApi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FotoApi/Pods-FotoApi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D236E2964775DE72C93F304D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FotoApi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43BA42F72844895C007DC6F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43BA43032844895C007DC6F0 /* ViewController.swift in Sources */,
+				43BC569728448F8800A2DA8C /* TaskList.swift in Sources */,
 				43BA42FF2844895C007DC6F0 /* AppDelegate.swift in Sources */,
+				43BC569428448F2E00A2DA8C /* CustomTableViewCell.swift in Sources */,
+				43BC569928448FF000A2DA8C /* TableViewController.swift in Sources */,
+				43BC569D2844907800A2DA8C /* Constants.swift in Sources */,
 				43BA43012844895C007DC6F0 /* SceneDelegate.swift in Sources */,
+				43BC569B2844905400A2DA8C /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +400,7 @@
 		};
 		43BA43102844895F007DC6F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1C5C6A093EA45CF58E0E9C3 /* Pods-FotoApi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,10 +408,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HVP4FX84SC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FotoApi/Info.plist;
+				INFOPLIST_FILE = "FotoApi/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +430,7 @@
 		};
 		43BA43112844895F007DC6F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C1854661F43A19B1219BA5 /* Pods-FotoApi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,10 +438,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HVP4FX84SC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FotoApi/Info.plist;
+				INFOPLIST_FILE = "FotoApi/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
