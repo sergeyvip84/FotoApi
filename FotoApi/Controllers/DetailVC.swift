@@ -7,15 +7,11 @@
 
 import UIKit
 
-
-
 class DetailVC: UIViewController {
-
+    
     var urlString = ""
     var imageTitle = ""
-
-    var dataProvider: DataProvider!
-
+    
     let image : UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -27,51 +23,49 @@ class DetailVC: UIViewController {
         view.layer.shadowRadius = 20
         return view
     } ()
-
+    
+    @IBOutlet var imageView: UIImageView!
+    
     let label : UILabel = {
         let text = UILabel ()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.textColor = .darkText
         return text
     } ()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let url = URL(string: urlString)!
-        dataProvider.downloadImage(url: url) { image in
-            self.image.image = image
-        }
-
+        
         view.addSubview(image)
         view.addSubview(label)
-
+        
         createImageViewConstraint()
         createLabelViewConstraint()
-
+        
         label.text = imageTitle
+        
+        DataProvider.share.downloadImage(url: urlString) { [weak self] image in
+            self?.image.image = image
+        }
     }
-
-    deinit {
-        print("controller dismissed")
-    }
-
+    
     func createLabelViewConstraint() {
-
+        
         label.heightAnchor.constraint(equalToConstant: 30).isActive = true
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 20).isActive = true
-
+        
     }
-
+    
     func createImageViewConstraint() {
-
+        
         image.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         image.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         image.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
         image.heightAnchor.constraint(equalToConstant: 400).isActive = true
         image.widthAnchor.constraint(equalToConstant: 200).isActive = true
-
+        
+        
         //        NSLayoutConstraint(item: image,
         //                           attribute: .leading,
         //                           relatedBy: .equal,
@@ -102,3 +96,4 @@ class DetailVC: UIViewController {
         //                           constant: 0).isActive = true
     }
 }
+

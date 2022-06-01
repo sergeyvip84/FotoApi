@@ -9,9 +9,13 @@ import UIKit
 
 class DataProvider {
     
+    static let share = DataProvider()
+    
     var imageCache = NSCache<NSString, UIImage>()
     
-    func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+    func downloadImage(url: String, completion: @escaping (UIImage?) -> Void) {
+        
+        let url = URL(string: url)!
         
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
             completion(cachedImage)
@@ -38,3 +42,4 @@ class DataProvider {
         }
     }
 }
+
