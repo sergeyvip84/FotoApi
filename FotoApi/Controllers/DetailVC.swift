@@ -24,8 +24,6 @@ class DetailVC: UIViewController {
         return view
     } ()
     
-    @IBOutlet var imageView: UIImageView!
-    
     let label : UILabel = {
         let text = UILabel ()
         text.translatesAutoresizingMaskIntoConstraints = false
