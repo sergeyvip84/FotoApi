@@ -25,10 +25,17 @@ class DetailVC: UIViewController {
     } ()
     
     let label : UILabel = {
-        let text = UILabel ()
+        let text = UILabel()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.textColor = .darkText
         return text
+    } ()
+    
+    let activityIndicator : UIActivityIndicatorView = {
+        let act = UIActivityIndicatorView()
+        act.translatesAutoresizingMaskIntoConstraints = false
+        act.isHidden = false
+        return act
     } ()
     
     override func viewDidLoad() {
@@ -36,15 +43,30 @@ class DetailVC: UIViewController {
         
         view.addSubview(image)
         view.addSubview(label)
+        view.addSubview(activityIndicator)
         
         createImageViewConstraint()
         createLabelViewConstraint()
+        activityIndicatorConstraint()
+        
+        TableViewController.share.showLoader(loader: activityIndicator, show: true)
         
         label.text = imageTitle
         
         DataProvider.share.downloadImage(url: urlString) { [weak self] image in
             self?.image.image = image
         }
+        
+        TableViewController.share.showLoader(loader: activityIndicator, show: false)
+    }
+    
+    func activityIndicatorConstraint () {
+        
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        activityIndicator.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        activityIndicator.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
     }
     
     func createLabelViewConstraint() {

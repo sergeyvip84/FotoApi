@@ -10,6 +10,8 @@ import RealmSwift
 
 class TableViewController: UITableViewController {
     
+    static let share = TableViewController()
+    
     let realm = try! Realm()
     var realmArray: Results<TaskListNew>!
     
@@ -81,7 +83,7 @@ class TableViewController: UITableViewController {
     
     func searchImage(text: String) {
         
-        showLoader(show: true)
+        self.showLoader(loader: self.loader, show: true)
         
         let base = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key="
         let format = "&format=json&nojsoncallback=1"
@@ -95,37 +97,37 @@ class TableViewController: UITableViewController {
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let jsonData = data else {
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
                 self.showError(text:"Error, json is empty")
                 return
             }
             guard let jsonAny = try? JSONSerialization.jsonObject(with: jsonData, options: []) else{
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
                 return
             }
             guard let json = jsonAny as? [String: Any] else {
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
                 return
             }
             
             guard let photos = json["photos"] as? [String: Any] else {
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
                 return
             }
             
             guard let photosArray = photos["photo"] as? [Any] else {
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
                 return
             }
             
             guard photosArray.count > 0 else {
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
                 self.showError(text: "Photos is empty")
                 return
             }
             
             guard let randomPhoto = photosArray[Int.random(in: 0...photosArray.count)] as? [String: Any] else {
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
                 return
             }
             
@@ -147,7 +149,7 @@ class TableViewController: UITableViewController {
                     }
                     tableView.reloadData()
                 }
-                self.showLoader(show: false)
+                self.showLoader(loader: self.loader, show: false)
             }).resume()
         }.resume()
     }
@@ -161,15 +163,15 @@ class TableViewController: UITableViewController {
             self.present(alert, animated: true)
         }
     }
-    func showLoader(show: Bool) {
+    func showLoader(loader: UIActivityIndicatorView, show: Bool) {
         DispatchQueue.main.async {
             if show {
-                self.loader.startAnimating()
-                self.loader.isHidden = false
+                loader.startAnimating()
+                loader.isHidden = false
             }
             else {
-                self.loader.stopAnimating()
-                self.loader.isHidden = true
+                loader.stopAnimating()
+                loader.isHidden = true
             }
         }
     }
